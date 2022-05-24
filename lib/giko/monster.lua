@@ -10,9 +10,9 @@ monster.notorious =
     { names = {nq = {"Cerberus", "Cerb"}}, sets = {"ToAU"}, windows = {"48h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h"}},
     { names = {nq = {"Hydra"}}, sets = {"ToAU"}, windows = {"48h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h"}},
     { names = {nq = {"Khimaira", "Khim"}}, sets = {"ToAU"}, windows = {"48h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h"}},
-    { names = {nq = {"Jormungand", "Jorm"}}, sets = {"CoP"}, windows = {"48h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h"}},
-    { names = {nq = {"Tiamat", "Tia"}}, sets = {"CoP"}, windows = {"48h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h"}},
-    { names = {nq = {"Vrtra"}}, sets = {"CoP"}, windows = {"48h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h"}}
+    { names = {nq = {"Jormungand", "Jorm"}}, sets = {"CoP"}, windows = {"72h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h"}},
+    { names = {nq = {"Tiamat", "Tia"}}, sets = {"CoP"}, windows = {"72h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h"}},
+    { names = {nq = {"Vrtra"}}, sets = {"CoP"}, windows = {"72h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h"}}
 }
 
 monster.get = function(key)
