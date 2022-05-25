@@ -50,9 +50,11 @@ death.set_day = function(name, day)
 
 end
 
-death.get_window = function(name)
+death.get_window = function(name, offset, grace)
 
-    local tod = death.get_tod(name)
+    local tod    = death.get_tod(name)
+    local offset = offset or 0
+    local grace  = grace or 5
 
     if tod ~= nil then
     
@@ -62,8 +64,8 @@ death.get_window = function(name)
         if mob ~= nil then
             for n, delay in pairs(mob.windows) do
                 time = time + common.to_seconds(delay)
-                if os.difftime(time, os.time()) > 0 then
-                    return {name = mob.names.nq[1], time = os.date('%Y-%m-%d %H:%M:%S', time), day = mob.names.hq and #mob.names.hq and tod.day + 1 or nil, count = n, countdown = os.difftime(time, os.time())}
+                if os.difftime(time, os.time()) > (0 - grace) then
+                    return {name = mob.names.nq[1], time = os.date('%Y-%m-%d %H:%M:%S', time - offset), day = mob.names.hq and #mob.names.hq and tod.day + 1 or nil, count = n, countdown = os.difftime(time - offset, os.time())}
                 end
             end
         end
