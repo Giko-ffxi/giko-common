@@ -3,7 +3,17 @@ local filepath = _addon.path .. 'config\\' .. string.lower(_addon.name) .. '.jso
 local config   = ashita.settings.load_merged(filepath, {})
 
 config.save = function()   
-    config.save = nil ashita.settings.save(filepath, config)
+
+	local data = {}
+	
+	for k,v in pairs(config) do
+		if k ~= 'save' then
+			data[k] = v
+		end
+	end
+	
+    ashita.settings.save(filepath, data)
+	
 end
 
 return config
