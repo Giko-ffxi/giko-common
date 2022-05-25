@@ -6,7 +6,7 @@ monster.notorious =
     { names = {nq = {"Adamantoise", "Ada"}, hq = {"Aspidochelone", "Aspi"}}, sets = {"Kings"}, windows = {"21h", "30m", "30m", "30m", "30m", "30m", "30m"}},
     { names = {nq = {"Behemoth", "Behe"}, hq = {"King Behemoth", "Kb"}}, sets = {"Kings"}, windows = {"21h", "30m", "30m", "30m", "30m", "30m", "30m"}},
     { names = {nq = {"Fafnir", "Faf"}, hq = {"Nidhogg", "Nid"}}, sets = {"Kings"}, windows = {"21h", "30m", "30m", "30m", "30m", "30m", "30m"}},
-    { names = {nq = {"King Arthro", "KA", "Arthro"}}, sets = {"Kings"}, windows = {"21h", "30m", "30m", "30m", "30m", "30m", "30m"}},
+    { names = {nq = {"King Arthro", "KA", "Arthro"}}, sets = {"Kings"}, windows = {"21h5m", "30m", "30m", "30m", "30m", "30m", "30m"}},
     { names = {nq = {"Cerberus", "Cerb"}}, sets = {"ToAU"}, windows = {"48h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h"}},
     { names = {nq = {"Hydra"}}, sets = {"ToAU"}, windows = {"48h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h"}},
     { names = {nq = {"Khimaira", "Khim"}}, sets = {"ToAU"}, windows = {"48h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h"}},
