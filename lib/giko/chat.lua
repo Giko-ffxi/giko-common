@@ -16,11 +16,13 @@ chat.linkshell = function(text, time)
 
     local time = time or os.time()
 
-    if time ~= nil then
-        chat.ls_buffer[time] = chat.ls_buffer[time] ~= nil and chat.ls_buffer[time] .. ' | ' .. text or text
+    if (chat.ls_buffer[time - 1] ~= nil) then
+        time = time - 1 
     end
+
+    chat.ls_buffer[time] = chat.ls_buffer[time] ~= nil and chat.ls_buffer[time] .. ' | ' .. text or text
     
-    ashita.timer.create(string.format('linkshell-%s', time), os.difftime(time, os.time()), 1, function() AshitaCore:GetChatManager():QueueCommand(string.format('/linkshell %s', chat.ls_buffer[time]), 1) end)
+    ashita.timer.create(string.format('linkshell-%s', time), os.difftime(time, os.time()), 1, function() AshitaCore:GetChatManager():QueueCommand(string.format('/linkshell %s', chat.ls_buffer[time]), 1); chat.ls_buffer[time] = nil end)
 
 end
 
