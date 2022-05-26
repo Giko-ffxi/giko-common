@@ -19,8 +19,9 @@ end
 death.get_day = function(name)
 
     local win = death.get_window(name)
+    local mob = monster.get(name)
 
-    if win ~= nil then
+    if win ~= nil and mob.names.hq and #mob.names.hq then
         return win.day
     end
 
@@ -29,7 +30,7 @@ end
 death.set_tod = function(name, gmt, day)
 
     local tod = {}
-    local pre = death.get_tod(name);
+    local pre = death.get_tod(name)
     local mob = monster.get(name)
     local day = day or (pre and mob.names.hq and not common.in_array(mob.names.hq, name) and pre.day + 1 or 0)
 

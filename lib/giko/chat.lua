@@ -1,15 +1,18 @@
-local chat = { ls_buffer = {} }
+local chat = { tell_buffer = 0, ls_buffer = {} }
 
 chat.say = function(text)
     AshitaCore:GetChatManager():QueueCommand(string.format('/say %s', text), 1)
 end
 
-chat.tell = function(username, text)
-    AshitaCore:GetChatManager():QueueCommand(string.format('/tell %s %s', username, text), 1)    
-end
-
 chat.command = function(command, text)
     AshitaCore:GetChatManager():QueueCommand(string.format('/%s %s', command, text), 1)    
+end
+
+chat.tell = function(username, text, time)
+ 
+    chat.tell_buffer = math.max(chat.tell_buffer + 2, os.time())
+    ashita.timer.create(string.format('tell-%s', chat.tell_buffer), os.difftime(chat.tell_buffer , os.time()), 1, function() AshitaCore:GetChatManager():QueueCommand(string.format('/tell %s %s', username, text), 1); end)
+
 end
 
 chat.linkshell = function(text, time)
