@@ -1,4 +1,4 @@
-local chat = { tell_buffer = 0, ls_buffer = {} }
+local chat = { tell_buffer = 0, ls_buffer = {}, ec_buffer = {} }
 
 chat.say = function(text)
     AshitaCore:GetChatManager():QueueCommand(string.format('/say %s', text), 1)
@@ -26,6 +26,20 @@ chat.linkshell = function(text, time)
     chat.ls_buffer[time] = chat.ls_buffer[time] ~= nil and chat.ls_buffer[time] .. ' | ' .. text or text
     
     ashita.timer.create(string.format('linkshell-%s', time), os.difftime(time, os.time()), 1, function() AshitaCore:GetChatManager():QueueCommand(string.format('/linkshell %s', chat.ls_buffer[time]), 1); chat.ls_buffer[time] = nil end)
+
+end
+
+chat.echo = function(text, time)
+
+    local time = time or os.time()
+
+    if (chat.ec_buffer[time - 1] ~= nil) then
+        time = time - 1 
+    end
+
+    chat.ec_buffer[time] = chat.ec_buffer[time] ~= nil and chat.ec_buffer[time] .. ' | ' .. text or text
+    
+    ashita.timer.create(string.format('linkshell-%s', time), os.difftime(time, os.time()), 1, function() AshitaCore:GetChatManager():QueueCommand(string.format('/echo %s', chat.ec_buffer[time]), 1); chat.ec_buffer[time] = nil end)
 
 end
 

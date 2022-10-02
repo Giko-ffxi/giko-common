@@ -4,7 +4,7 @@ local cache  = {}
 
 cache.get = function(path, key)
 
-    local reader = io.open(path, 'r') or io.open(path, 'w+')
+    local reader = io.open(path, 'r')
     local value  = nil
 
     if reader ~= nil then

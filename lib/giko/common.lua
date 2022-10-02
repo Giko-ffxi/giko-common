@@ -13,6 +13,12 @@ common.size = function(t)
 
 end
 
+common.trim = function(s)
+
+    return (string.gsub(s, "^%s*(.-)%s*$", "%1"))
+
+end
+
 common.flatten = function(t)
 
 	local all = {}
@@ -31,6 +37,20 @@ common.flatten = function(t)
 
 	return all
     
+end
+
+common.ordinal = function(n)
+
+    local ordinal = nil
+
+    if n % 10 == 0 then ordinal = string.format('%dth', n) end
+    if (n < 10 or n > 20) and n % 10 == 1 then ordinal = string.format('%dst', n) end
+    if (n < 10 or n > 20) and n % 10 == 2 then ordinal = string.format('%dnd', n) end
+    if (n < 10 or n > 20) and n % 10 == 3 then ordinal = string.format('%drd', n) end
+    if ordinal == nil then ordinal = string.format('%dth', n) end
+    
+    return ordinal
+
 end
 
 common.in_array = function(array, val)
@@ -67,6 +87,18 @@ common.extend = function(a, b)
 
 end
 
+common.pluck = function(a, b)
+
+    local p = {}
+
+    for k, o in pairs(a) do        
+        table.insert(p, o[b])
+    end
+
+    return p
+
+end
+
 common.file_exists = function(path)
     
     local f = io.open(path, "r")    
@@ -82,6 +114,24 @@ common.to_seconds = function(time)
     local s = string.match(time, '(%-?%d+)s')
 
     return ((d or 0) * 86400) + ((h or 0) * 3600) + ((m or 0) * 60) + ((s or 0) * 1)
+
+end
+
+common.to_duration = function(time)
+    
+    local duration = ""
+
+    local d = math.floor(math.abs(time) / 86400)
+    local h = math.floor(math.mod(math.abs(time), 86400) / 3600)
+    local m = math.floor(math.mod(math.abs(time), 3600) / 60)
+    local s = math.floor(math.mod(math.abs(time), 60))
+
+    if d > 0 then duration = duration .. d .. "d" end
+    if h > 0 then duration = duration .. h .. "h" end
+    if m > 0 then duration = duration .. m .. "m" end
+    if s > 0 then duration = duration .. s .. "s" end
+
+    return duration
 
 end
 
@@ -135,6 +185,16 @@ common.shortest = function(array)
     table.sort(array, function(a,b) return #a<#b end)
 
     return array[1]
+
+end
+
+common.concat = function(t1, t2)
+
+    for _, v in ipairs(t2) do 
+        table.insert(t1, v)
+    end
+
+    return t1
 
 end
 
