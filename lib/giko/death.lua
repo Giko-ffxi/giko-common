@@ -43,7 +43,7 @@ death.set_tod = function(name, gmt, day)
     if mob ~= nil then
 
         death.memory[mob.names.nq[1]] = json:encode({name = mob.names.nq[1], gmt = gmt, day = day, created_at = os.time()})
-        cache.set(death.cache, mob.names.nq[1], death.memory[name])
+        cache.set(death.cache, mob.names.nq[1], death.memory[mob.names.nq[1]])
 
     end
 
@@ -57,7 +57,7 @@ death.set_day = function(name, day)
     if mob ~= nil and tod ~= nil then
 
         death.memory[mob.names.nq[1]] = json:encode({name = tod.name, gmt = tod.gmt, day = day, created_at = os.time()})
-        cache.set(death.cache, mob.names.nq[1], death.memory[name])
+        cache.set(death.cache, mob.names.nq[1], death.memory[mob.names.nq[1]])
         
     end
 
