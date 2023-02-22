@@ -4,8 +4,8 @@ chat.say = function(text)
     AshitaCore:GetChatManager():QueueCommand(string.format('/say %s', text), 1)
 end
 
-chat.command = function(command, text)
-    AshitaCore:GetChatManager():QueueCommand(string.format('/%s %s', command, text), 1)    
+chat.command = function(command)
+    AshitaCore:GetChatManager():QueueCommand(string.format('/%s', command), 1)    
 end
 
 chat.tell = function(username, text, time)

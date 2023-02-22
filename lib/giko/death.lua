@@ -77,11 +77,17 @@ death.get_window = function(name, offset)
             for n, delay in pairs(mob.windows.at) do
                 time = time + common.to_seconds(delay)
                 if os.difftime(time, os.time()) > (0 - common.to_seconds(mob.windows.length)) then
-                    return {name = mob.names.nq[1], time = os.date('%Y-%m-%d %H:%M:%S', time - offset), day = mob.names.hq and #mob.names.hq and tod.day + 1 or nil, count = n, countdown = os.difftime(time - offset, os.time())}
+                    return {name = mob.names.nq[1], time = os.date('%Y-%m-%d %H:%M:%S', time - offset), day = mob.names.hq and #mob.names.hq and tod.day + 1 or nil, count = n, length = mob.windows.length, countdown = os.difftime(time - offset, os.time())}
                 end
             end
         end
     end
+
+end
+
+death.purge = function()
+
+    death.memory = {}
 
 end
 

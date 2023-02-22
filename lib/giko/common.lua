@@ -15,7 +15,14 @@ end
 
 common.trim = function(s)
 
-    return (string.gsub(s, "^%s*(.-)%s*$", "%1"))
+    return s ~= nil and (string.gsub(s, "^%s*(.-)%s*$", "%1")) or nil
+
+end
+
+common.file_exists = function(p)
+
+    local f = io.open(p, "r")
+    return f ~= nil and io.close(f)
 
 end
 

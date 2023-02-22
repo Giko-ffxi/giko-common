@@ -1,0 +1,10 @@
+ffmpeg-normalize -f -nt peak -t -36 call.00.wav  -o ../01/giko.call.01.01.wav 
+ffmpeg-normalize -f -nt peak -t -32 call.00.wav  -o ../02/giko.call.01.02.wav 
+ffmpeg-normalize -f -nt peak -t -28 call.00.wav  -o ../03/giko.call.01.03.wav 
+ffmpeg-normalize -f -nt peak -t -24 call.00.wav  -o ../04/giko.call.01.04.wav 
+ffmpeg-normalize -f -nt peak -t -20 call.00.wav  -o ../05/giko.call.01.05.wav 
+ffmpeg-normalize -f -nt peak -t -16 call.00.wav  -o ../06/giko.call.01.06.wav 
+ffmpeg-normalize -f -nt peak -t -12 call.00.wav  -o ../07/giko.call.01.07.wav 
+ffmpeg-normalize -f -nt peak -t -8 call.00.wav  -o ../08/giko.call.01.08.wav 
+ffmpeg-normalize -f -nt peak -t -4 call.00.wav  -o ../09/giko.call.01.09.wav 
+ffmpeg-normalize -f -nt peak -t 0 call.00.wav  -o ../10/giko.call.01.10.wav 

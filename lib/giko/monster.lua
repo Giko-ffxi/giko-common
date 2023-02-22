@@ -10,6 +10,7 @@ monster.notorious =
     { names = {nq = {"Carmine Dobsonfly", "Carmine", "Dobsonfly"}}, sets = {"NM"}, windows = {at = {"21h"}, length = "3h"}},
     { names = {nq = {"Cerberus", "Cerb"}}, sets = {"ToAU"}, windows = {at = {"48h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h"}, length = "10s"}},
     { names = {nq = {"Devil Manta", "DM"}}, sets = {"NM"}, windows = {at = {"10m"}, length = "10m"}},
+    { names = {nq = {"Eastern Shadow"}}, sets = {"NM"}, windows = {at = {"16h"}, length = "16h"}},
     { names = {nq = {"Fafnir", "Faf"}, hq = {"Nidhogg", "Nid"}}, sets = {"Kings"}, windows = {at = {"21h", "30m", "30m", "30m", "30m", "30m", "30m"}, length = "10s"}},
     { names = {nq = {"Hydra"}}, sets = {"ToAU"}, windows = {at = {"48h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h"}, length = "10s"}},
     { names = {nq = {"Jormungand", "Jorm"}}, sets = {"CoP"}, windows = {at = {"72h", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m"}, length = "10s"}},
@@ -17,6 +18,7 @@ monster.notorious =
     { names = {nq = {"King Vinegarroon", "KV"}}, sets = {"NM"}, windows = {at = {"21h"}, length = "3h"}},
     { names = {nq = {"Khimaira", "Khim"}}, sets = {"ToAU"}, windows = {at = {"48h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h", "1h"}, length = "10s"}},
     { names = {nq = {"Kreutzet"}}, sets = {"NM"}, windows = {at = {"9h"}, length = "3h"}},
+    { names = {nq = {"Orcish Overlord", "Orc Overlord"}, hq = {"Overlord Bakgodek", "Bakgodek"}}, sets = {"NM"}, windows = {at = {"21h", "30m", "30m", "30m", "30m", "30m", "30m"}, length = "10s"}},    
     { names = {nq = {"Padfoot"}}, sets = {"NM"}, windows = {at = {"21h"}, length = "3h"}},
     { names = {nq = {"Roc"}}, sets = {"NM"}, windows = {at = {"21h"}, length = "3h"}},
     { names = {nq = {"Serket"}}, sets = {"NM"}, windows = {at = {"21h"}, length = "3h"}},
@@ -25,6 +27,8 @@ monster.notorious =
     { names = {nq = {"Voluptuous Vivian", "Voluptuous", "Vivian", "VV"}}, sets = {"NM"}, windows = {at = {"16h"}, length = "8h"}},
     { names = {nq = {"Vrtra"}}, sets = {"CoP"}, windows = {at = {"72h", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m", "30m"}, length = "10s"}},
     { names = {nq = {"Xolotl"}}, sets = {"NM"}, windows = {at = {"21h"}, length = "3h"}},
+    { names = {nq = {"Yagudo Avatar", "Yag Avatar"}, hq = {"Tzee Xicu the Manifest", "Tzee"}}, sets = {"NM"}, windows = {at = {"21h", "30m", "30m", "30m", "30m", "30m", "30m"}, length = "10s"}},  
+    { names = {nq = {"Western Shadow"}}, sets = {"NM"}, windows = {at = {"16h"}, length = "16h"}},        
 }
 
 monster.get = function(key)
