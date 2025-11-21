@@ -163,18 +163,22 @@ end
 
 common.gmt_to_local_date = function(gmt)
 
-    local Y, m, d, H, M, S = string.match(gmt or '0000-00-00 00:00:00', '^(%d%d%d%d)-(%d%d)-(%d%d) (%d%d):(%d%d):(%d%d)$')                
-    local time = os.time({year=Y, month=m, day=d, hour=H, min=M, sec=S}) + common.offset_to_seconds(os.date('%z', os.time())) or 0   
+    local Y, m, d, H, M, S = string.match(gmt or '0000-00-00 00:00:00', '^(%d%d%d%d)-(%d%d)-(%d%d) (%d%d):(%d%d):(%d%d)$')  
+              
+    local gmt_time = os.time({year=Y, month=m, day=d, hour=H, min=M, sec=S})
 
+    local time = gmt_time + common.offset_to_seconds(os.date('%z', gmt_time)) or 0   
     return time > 0 and os.date('%Y-%m-%d %H:%M:%S %z', time) or common.time_reduce(0) 
 
 end
 
 common.gmt_to_local_time = function(gmt)
 
-    local Y, m, d, H, M, S = string.match(gmt or '0000-00-00 00:00:00', '^(%d%d%d%d)-(%d%d)-(%d%d) (%d%d):(%d%d):(%d%d)$')                
-    local time = os.time({year=Y, month=m, day=d, hour=H, min=M, sec=S}) + common.offset_to_seconds(os.date('%z', os.time())) or 0   
+    local Y, m, d, H, M, S = string.match(gmt or '0000-00-00 00:00:00', '^(%d%d%d%d)-(%d%d)-(%d%d) (%d%d):(%d%d):(%d%d)$')  
+              
+    local gmt_time = os.time({year=Y, month=m, day=d, hour=H, min=M, sec=S})
 
+    local time = gmt_time + common.offset_to_seconds(os.date('%z', gmt_time)) or 0   
     return time > 0 and time or 0
 
 end
